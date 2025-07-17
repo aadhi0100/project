@@ -1,0 +1,94 @@
+body {
+  background: radial-gradient(circle at center, #1e0033, #0a001a);
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ff00cc;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff33cc; }
+  to { text-shadow: 0 0 20px #ff00cc, 0 0 30px #ff33cc; }
+}
+
+.prediction-box {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ff00cc;
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  margin-top: 20px;
+  box-shadow: 0 0 25px #ff00cc88;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 10px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #ff00cc, #6600ff);
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dancing-doll {
+  width: 150px;
+  height: 150px;
+  background: url('https://media.giphy.com/media/jQmVFypWInKCc/giphy.gif') no-repeat center;
+  background-size: contain;
+  margin: 20px auto;
+  animation: bounce 3s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.9em;
+  color: #aaa;
+}
